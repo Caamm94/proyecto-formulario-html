@@ -1,0 +1,12 @@
+<style>
+        a:link{
+            color: grey;
+        }
+        a:visited{
+            color: orange;
+        }
+        a:hover{
+            color: brown;
+            font-size: larger;
+        }
+    </style>

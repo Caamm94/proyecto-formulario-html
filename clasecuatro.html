@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase cuatro ---HTML</title>
+    <link rel="stylesheet" href="css/formulariocss">
+<style>
+    label{
+        color:blueviolet;
+        display:block;  
+        
+    }
+    body{
+        margin:0;
+        background-color: #245;
+        font-family: Arial, Helvetica, sans-serif;
+        text-shadow: 2px 2px 2px #555;
+    }
+    #contenedor_ppal{
+        margin: 10px;
+        border-radius: 40px;
+        width: 70%;
+        margin: 10px auto;
+        box-shadow: 2px 2px 2px #555;
+        background-color: coral;
+    }
+    .contenedor_campo{
+        margin-bottom: 10px;
+        border: 1px dashed pink;
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        padding: 5px;
+    }
+    #titulo{
+        color: blanchedalmond;
+        font-size: 20px;
+        margin-bottom: 20px;
+        margin-top: 5px;
+        text-align: center;
+        /* border: 1px dashed yellow; */
+    }
+    p{
+        margin: 0;
+    }
+    .contenedor_boton{
+        margin: 0 auto;
+        text-align: center;
+        width: 20%;
+
+    }
+    input{
+        width: 70%;
+        height: 30px;
+        border-radius: 5px;
+        background-color:#95afc0;
+        font-size: 15pt;
+        font-weight: bold;
+        padding: 2px 2px 2px 2px;
+    }
+    span{
+        color: white;
+        display: block;
+        margin-bottom: 3px;
+        margin-top: 3px;
+    }
+    select{
+        width: 70%;
+        height: 30px;
+        border-radius: 5px;
+        background-color: #95afc0;
+        font-size: 15pt;
+        font-weight: bold;
+    }
+    #genero,#estudios{
+    
+        display:flex ;
+        justify-content: center;
+    }
+</style>
+
+</head>
+<body>
+    <div id="contenedor_ppal">
+        <div id="titulo">
+            <p>INGRESE SUS DATOS</p>
+        </div>
+
+    <form action="https://postman-echo.com/post" method="post">
+        
+        <!-- Campo Nombre -->
+        <div class="contenedor_campo">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre"placeholder="Ingrese su nombre"maxlength="30"minlength="2" required>
+        </div>
+        <!-- Campo Apellido -->
+        <div class="contenedor_campo">
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" placeholder="Ingrese su apellido" >
+        </div>
+
+        <!-- Campo Edad -->
+        <div class="contenedor_campo">
+        <label for="edad">Edad  </label>
+        <input type="number"
+        name="edad" id="Edad" min="3" placeholder="Ingrese su edad">
+        </div>
+        
+        <!-- CAmpo Email -->
+        <div class="contenedor_campo">
+        <label for="email">E-mail  </label>
+        <input type="email"
+        name="email" id="email"  placeholder="Ingrese su email">
+        </div>
+        
+        <!-- Campo password -->
+        <div class="contenedor_campo">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="Ingrese la  clave">
+        </div>
+        
+        <!-- Campo Genero -->
+        <div class="contenedor_campo" id="genero">
+        <label for="genero">Genero</label>
+        <input type="radio" name="genero" value="femenino" checked><span> Femenino</span> 
+        <input type="radio" name="genero" value="masculino"><span> Masculino</span> 
+        <input type="radio" name="genero" value="otro"><span> Otro</span> 
+        </div>
+        
+        <!-- Campo estudios  del  usuario -->
+        <div class="contenedor_campo" id="estudios">
+        <label for="estudios">Estudios</label>
+        <input type="checkbox" name="primaria" id="estudios" value="si" checked><span> Primaria</span> 
+        <input type="checkbox" name="secundaria" id="estudios" value="si"><span>Secundaria </span>
+        <input type="checkbox" name="terciarios" id="estudios" value="si"><span>Terciarios </span>
+        <input type="checkbox" name="cursos" id="estudios" value="si"><span>Cursos </span>
+        </div>
+
+        <!-- Campo vehiculo -->
+        <div class="contenedor_campo">
+        <label for="vehiculo">Vehiculo</label>
+        <select name="vehiculo" id="vehiculo">
+            <option value="ford">Ford</option>
+            <option value="bmw">BMW</option>
+            <option value="fiat">Fiat</option>
+            <option value="ninguno">Ninguno</option>
+        </select>
+        </div>
+
+        <!-- Campo  color -->
+        <div class="contenedor_campo">
+        <label for="color"></label>
+         <input type="color" name="color" value="25">
+        </div>
+        
+        <!-- Campo comentario -->
+        <div class="contenedor_campo">
+        <label for="comentario">Comentarios</label>
+        <textarea name="comentario" id="comentario" cols="30" rows="10"></textarea>
+        </div>
+        
+        <!-- Campo  Nivel -->
+        <div class="contenedor_campo">
+        <label for="nivel">Nivel</label>
+        <input type="range" name="nivel" value="25">
+        </div>
+        
+        <!-- Campo Fecha -->
+        <div class="contenedor_campo">
+        <label for="fecha">Fecha</label>
+        <input type="date" name="fecha" id="fecha">
+        </div>
+        <br>
+        <div class="contenedor_boton">
+        <input type="submit" value="Enviar">
+        </div>
+        
+    </form>
+    </div>
+</body>
+</html>
